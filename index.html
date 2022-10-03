@@ -10,13 +10,17 @@
         <title>!!!AWESOME TRG!!!</title>
     </head>
     <body>
+        <header>
+            
+        </header>
+
         <div class="main-menu">
             <div class="fir-menu-form">
-                <form>
+                <form id="weapon-1">
                     <input type="text" name="damage" placeholder="Профиль урона: ">
                     <input type="text" name="rec" placeholder="Точность: ">
                     <input type="text" name="shot-count" placeholder="Кол-во выстрелов: ">
-                    <input type="button" name="shot" value="Стрелять!!!">
+                    <input type="submit" name="shot" value="Стрелять!!!">
                 </form>
             </div>
 
@@ -24,5 +28,19 @@
                 
             </div>
         </div>
+
+        <footer>
+            <script>
+                
+                $('#weapon-1').submit(function () {
+                    var that = $(this);
+                    var data = that.serialize();
+
+                    $('.sec-menu-result').html(data['damage']);
+                })
+
+            </script>
+            
+        </footer>
     </body>
 <html>
