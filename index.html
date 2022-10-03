@@ -35,7 +35,7 @@
                 $('#weapon-1-btn').on('click', function (e) {
                     var that = $('#weapon-1');
                     var data = that.serializeArray();
-
+                    console.log(data);
                     $('.sec-menu-result').html(data['damage']);
                 })
 
