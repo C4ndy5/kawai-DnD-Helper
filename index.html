@@ -20,7 +20,7 @@
                     <input type="text" name="damage" placeholder="Профиль урона: ">
                     <input type="text" name="rec" placeholder="Точность: ">
                     <input type="text" name="shot-count" placeholder="Кол-во выстрелов: ">
-                    <input type="submit" name="shot" value="Стрелять!!!">
+                    <input id="weapon-1-btn" type="button" name="shot" value="Стрелять!!!">
                 </form>
             </div>
 
@@ -32,8 +32,8 @@
         <footer>
             <script>
                 
-                $('#weapon-1').submit(function () {
-                    var that = $(this);
+                $('#weapon-1-btn').on('clock', function (e) {
+                    var that = $('#weapon-1');
                     var data = that.serialize();
 
                     $('.sec-menu-result').html(data['damage']);
