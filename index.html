@@ -15,33 +15,61 @@
         </header>
 
         <div class="main-menu">
-            <div class="fir-menu-form">
-                <form id="weapon-1">
-                    <input type="text" name="damage" placeholder="Профиль урона: ">
-                    <input type="text" name="rec" placeholder="Точность: ">
-                    <input type="text" name="shot-count" placeholder="Кол-во выстрелов: ">
-                    <input id="weapon-1-btn" type="button" name="shot" value="Стрелять!!!">
-                </form>
-            </div>
+            <div class="weapon weapon-menu-1">
+                <div class="fir-menu-form">
+                    <form id="weapon-1">
+                        <input type="text" name="damage" placeholder="Профиль урона: ">
+                        <input type="text" name="rec" placeholder="Точность: ">
+                        <input type="text" name="shot-count" placeholder="Кол-во выстрелов: ">
+                        <input type="text" name="reliability" placeholder="Надежность: ">
+                        <input id="weapon-1-btn" type="button" name="shot" value="Стрелять!!!">
+                    </form>
+                </div>
 
-            <div class="sec-menu-result">
-                
+                <div class="sec-menu-result">
+                    
+                </div>
             </div>
+            
         </div>
 
         <footer>
             <script>
+                function getRandomInRange(min, max) {
+                    return Math.floor(Math.random() * (max - min + 1)) + min;
+                }
                 
                 $('#weapon-1-btn').on('click', function (e) {
                     var that = $('#weapon-1');
                     var data_read = that.serializeArray();
                     var data = {};
+                    var result = [];
+                    var hit;
+                    var wound;
+                    var count = 0;
+
+
                     
                     $.each(data_read,function(){
                         data[this.name] = this.value;
                     });
-                    
-                    $('.sec-menu-result').html(data['damage']);
+
+                    var shout_count = +data['shot-count'];
+                    var damage = +data['damage'];
+
+                    while (count < shout_count){
+                        hit = getRandomInRange(1, 10);
+
+                        wound = 6 * getRandomInRange(1, 6);
+
+                        result.push(hit +" - "+ wound);
+                    }
+
+                    $.each(result,function(){
+                        $('.sec-menu-result').append($('<div>', {
+                            'text': this;
+                        }));
+                    });
                 })
 
             </script>
