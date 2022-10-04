@@ -28,7 +28,7 @@ body{
 	flex-flow: column nowrap
 }
 
-@media (min-width: 48rem){
+@media (max-width: 48rem){
 	.menu{
 		height: 50vw;
 	}
