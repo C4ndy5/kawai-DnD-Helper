@@ -40,6 +40,8 @@
                 }
                 
                 $('#weapon-1-btn').on('click', function (e) {
+                    $('.sec-menu-result').html('');
+
                     var that = $('#weapon-1');
                     var data_read = that.serializeArray();
                     var data = {};
