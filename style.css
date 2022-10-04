@@ -23,11 +23,12 @@ body{
 	overflow-x: hiden; /* прокрутка по горизонтали */
 	overflow-y: auto; /* прокрутка по вертикали */
 }
+
 .weapon{
 	flex-flow: column nowrap
 }
 
-@media (min-width: 760px){
+@media (min-width: 48rem){
 	.menu{
 		height: 50vw;
 	}
