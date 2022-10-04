@@ -18,6 +18,11 @@ body{
 	font-size: 20px;
 	height: 10vh;
 }
+
+.sec-menu-result{
+	overflow-x: hiden; /* прокрутка по горизонтали */
+	overflow-y: auto; /* прокрутка по вертикали */
+}
 .weapon{
 	flex-flow: column nowrap
 }
