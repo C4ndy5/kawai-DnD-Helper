@@ -4,6 +4,7 @@
 
 .menu{
 	display:inline-block;
+	width: 45%;
 }
 .weapon{
 	flex-flow: column nowrap
