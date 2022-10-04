@@ -74,7 +74,7 @@
 
                         wound = damage * getRandomInRange(1, 6);
 
-                        if (shout_count > 3 && hit < reliability){
+                        if (shout_count > 3 && (hit - accuracy) == 1 && getRandomInRange(1, 10) < reliability){
                             $('.sec-menu-result').append($('<div>', {
                                 'text': "Wedge on " + getRandomInRange(1, 6) + " rounds!!!"
                             }));
