@@ -1,6 +1,7 @@
 .sett-inp{
 	font-size: 20px;
 	width: 45vw;
+	padding-bottom: 4px;
 }
 
 .menu{
@@ -10,17 +11,4 @@
 }
 .weapon{
 	flex-flow: column nowrap
-}
-
-@media (max-width: 48em) {
-	.sett-inp{
-		font-size: 15px;
-		width: 45vw;
-	}
-
-	.menu{
-		display:inline-block;
-		width: 50vw;
-		font-size: 18px;
-	}
 }
