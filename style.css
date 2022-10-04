@@ -3,7 +3,7 @@ input{
 }
 
 .menu{
-	display:inline;
+	display:inline-block;
 }
 .weapon{
 	flex-flow: column nowrap
