@@ -19,7 +19,7 @@
                 <div class="fir-menu-form">
                     <form id="weapon-1">
                         <input type="text" name="damage" placeholder="Профиль урона: ">
-                        <input type="text" name="rec" placeholder="Точность: ">
+                        <input type="text" name="accuracy" placeholder="Точность: ">
                         <input type="text" name="shot-count" placeholder="Кол-во выстрелов: ">
                         <input type="text" name="reliability" placeholder="Надежность: ">
                         <input id="weapon-1-btn" type="button" name="shot" value="Стрелять!!!">
@@ -56,6 +56,7 @@
 
                     var shout_count = +data['shot-count'];
                     var damage = +data['damage'];
+                    var accuracy = +data['accuracy'];
                     var reliability;
 
                     if(data['reliability'] == 'vr'){
@@ -67,7 +68,7 @@
                     }
 
                     while (count < shout_count){
-                        hit = getRandomInRange(1, 10);
+                        hit = getRandomInRange(1, 10) + accuracy;
 
                         wound = damage * getRandomInRange(1, 6);
 
