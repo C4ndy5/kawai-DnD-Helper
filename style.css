@@ -1,3 +1,7 @@
+body{
+	background-color: rgba(15, 15, 15, 1.0);
+}
+
 .sett-inp{
 	font-size: 20px;
 	width: 45vw;
