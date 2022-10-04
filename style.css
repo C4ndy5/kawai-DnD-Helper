@@ -16,8 +16,14 @@ body{
 	display:inline-block;
 	width: 45vw;
 	font-size: 20px;
-	margin-right: 5px;
+	height: 10vh;
 }
 .weapon{
 	flex-flow: column nowrap
+}
+
+@media (min-width: 760px){
+	.menu{
+		height: 50vw;
+	}
 }
