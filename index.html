@@ -56,13 +56,29 @@
 
                     var shout_count = +data['shot-count'];
                     var damage = +data['damage'];
+                    var reliability;
+
+                    if(data['reliability'] == 'vr'){
+                        reliability = 4;
+                    }else if(data['reliability'] == 'st'){
+                        reliability = 5;
+                    }else{
+                        reliability = 8;
+                    }
 
                     while (count < shout_count){
                         hit = getRandomInRange(1, 10);
 
                         wound = damage * getRandomInRange(1, 6);
 
-                        result.push("hit: " + hit + " --- " + "wound: " + wound);
+                        if (count > 3 && hit < reliability){
+                            $('.sec-menu-result').append($('<div>', {
+                                'text': "Wedge!!!"
+                            }));
+                            break;
+                        }
+
+                        result.push("hit: " + hit + " -- " + "wound: " + wound);
                         count ++;
                     }
 
