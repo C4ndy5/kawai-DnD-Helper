@@ -82,11 +82,13 @@
                         result.push("hit: " + hit + " -- " + "wound: " + wound);
                         count ++;
                     }
-
+                    count=0;
                     $.each(result,function(){
+
                         $('.sec-menu-result').append($('<div>', {
-                            'text': this
+                            'text': count + " " + this
                         }));
+                        count ++;
                     });
                 })
 
