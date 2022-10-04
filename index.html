@@ -52,6 +52,7 @@
                     var hit_with_acc;
                     var wound;
                     var count = 0;
+                    var c=0;
 
 
                     
@@ -76,7 +77,12 @@
                         hit = getRandomInRange(1, 10);
                         hit_with_acc = hit  + accuracy; 
 
-                        wound = damage * getRandomInRange(1, 6);
+                        while (c < damage)
+                        {
+                            wound += getRandomInRange(1, 6);
+                        }
+
+                        c = 0;
 
                         if (shout_count > 3 && hit == 1 && getRandomInRange(1, 10) < reliability){
                             $('.sec-menu-result').append($('<div>', {
