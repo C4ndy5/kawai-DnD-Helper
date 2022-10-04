@@ -2,6 +2,9 @@ input{
 	font-size: 3vh;
 }
 
+.menu{
+	display:inline;
+}
 .weapon{
 	flex-flow: column nowrap
 }
