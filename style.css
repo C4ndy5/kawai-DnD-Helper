@@ -15,11 +15,12 @@
 @media (max-width: 48em) {
 	.sett-inp{
 		font-size: 15px;
+		max-width: 65%;
 	}
 
 	.menu{
 		display:inline-block;
-		width: 45%;
+		max-width: 50%;
 		font-size: 15px;
 	}
 }
