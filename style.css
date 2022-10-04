@@ -1,6 +1,6 @@
 body{
 	background-color: rgba(30, 30, 30, 1.0);
-	font-style: rgba(204, 4, 4, 1.0);
+	color: rgba(204, 4, 4, 1.0);
 }
 
 .sett-inp{
@@ -14,8 +14,9 @@ body{
 
 .menu{
 	display:inline-block;
-	width: 42vw;
+	width: 45vw;
 	font-size: 20px;
+	margin-right: 5px;
 }
 .weapon{
 	flex-flow: column nowrap
