@@ -50,7 +50,7 @@
                     var result = [];
                     var hit;
                     var hit_with_acc;
-                    var wound;
+                    var wound = 0;
                     var count = 0;
                     var c=0;
 
@@ -79,7 +79,7 @@
 
                         while (c < damage)
                         {
-                            wound += getRandomInRange(1, 6);
+                            wound = wound + getRandomInRange(1, 6);
                             c++;
                         }
 
